@@ -1,9 +1,22 @@
-# 工作环境
+# 安装vim
 
-## 第一次提交,待整理
 
-    git clone git@github.com:yubo/home.git ~/.yubo
-    cd ~/.yubo && sh install.sh
+	## vim7.3+
+	wget http://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
+	locate python | grep '/config$'
+	./configure --with-features=huge \
+	            --enable-multibyte \
+	            --enable-rubyinterp \
+	            --enable-pythoninterp \
+	            --with-python-config-dir=/usr/lib64/python2.6/config \
+	            --enable-perlinterp \
+	            --enable-luainterp \
+	            --enable-gui=gtk2
+
+## clone code env repo
+
+    git clone git@github.com:laiwei/home.git ~/.codeenv
+    cd ~/.codeenv && sh install.sh
     fc-cache -vf ~/.fonts
     vim
     :BundleInstall
@@ -26,23 +39,15 @@
 	## cmake
 	wget http://www.cmake.org/files/v3.2/cmake-3.2.1.tar.gz
 	...
+
 	## global 
 	wget http://tamacom.com/global/global-6.4.tar.gz
 	...
-	## vim7.3+
-	wget http://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
-	locate python | grep '/config$'
-	./configure --with-features=huge \
-	            --enable-multibyte \
-	            --enable-rubyinterp \
-	            --enable-pythoninterp \
-	            --with-python-config-dir=/usr/lib64/python2.6/config \
-	            --enable-perlinterp \
-	            --enable-luainterp \
-	            --enable-gui=gtk2
+
 	## ycm
-	cd ~/.vim/bundle/YouCompleteMe                                                                                                                                                                                  
+	cd ~/.vim/bundle/YouCompleteMe
 	./install.sh --clang-completer
+
 	## golang
 	cd
 	mkdir gopath
@@ -74,3 +79,4 @@
       \  /\____/_____/\____/
       / /   www.yubo.org
      /_/
+
