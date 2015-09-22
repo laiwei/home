@@ -32,7 +32,7 @@
 	git clone https://github.com/libevent/libevent.git 
 	cd libevent; git checkout -b release-2.0.22-stable release-2.0.22-stable; ...
 	## tmux
-	git clone git://git.code.sf.net/p/tmux/tmux-code tmux
+	git clone https://github.com/tmux/tmux.git tmux
 	cd tmux; ...
 
 	#install ycm/vim
