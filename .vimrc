@@ -152,6 +152,15 @@ let NERDTreeIgnore = ['\.pyc', '\.mod\.c', '\.o', '\.ko', '\.a', '\.so', 'CMakeF
 
 " mappings {{{
 let mapleader = ','
+
+" tab
+map <C-M> :tabnew<CR>
+map <C-N> :tabnext<CR>
+map <C-P> :tabpre<CR>
+nnoremap <leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
+nnoremap <leader>, :tabnew <C-R>=expand('%:p:h') . '/'<CR>
+inoremap jj <Esc>
+
 " normal mode
 nnoremap Y                     y$
 nnoremap #                     :let @/=printf('\<%s\>\C', expand('<cword>'))<CR>
