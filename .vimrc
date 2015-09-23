@@ -1,7 +1,8 @@
 " options {{{
 " tab替换为4空格 %retab! 
+set ch=2
 set ts=4
-"set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
