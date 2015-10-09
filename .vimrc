@@ -272,7 +272,7 @@ au FileType go nmap <leader>c <Plug>(go-coverage)
 au FileType go nmap <Leader>ds <Plug>(go-def-split)
 "au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 "au FileType go nmap <Leader>dt <Plug>(go-def-tab)
-au FileType go nmap <Leader>e <Plug>(go-rename)
+au FileType go nmap <Leader>r <Plug>(go-rename)
 au FileType go nmap <C-g>	gd
 au FileType go nmap <C-s> <Plug>(go-def-vertical)
 
