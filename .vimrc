@@ -38,7 +38,7 @@ set isfname-== isfname-=,
 set listchars=trail:«
 "set list
 set modeline
-set mouse=a
+set mouse=v
 set number numberwidth=4 showbreak=\ \ ->
 set number numberwidth=4
 set nonumber
@@ -81,7 +81,7 @@ set ttyfast
 set ttymouse=xterm
 set scroll=11
 "显示行号
-"set number
+set number
 "无限undo
 " Enable modelines only on secure vim versions
 if (v:version >= 703)
