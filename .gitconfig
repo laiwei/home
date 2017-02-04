@@ -8,6 +8,7 @@
 [core]
 	editor = vim
 	whitespace = tab-in-indent,trailing-space
+	quotepath = false
 [alias]
 	s = status
 	co = checkout
@@ -24,3 +25,5 @@
 	default = matching
 [color]
 	ui = auto
+[http]
+	sslVerify = true

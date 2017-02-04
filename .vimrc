@@ -13,7 +13,7 @@ set autoindent smartindent
 set autoread
 set backspace=indent,eol,start
 set completefunc=
-set cursorcolumn cursorline
+"set cursorcolumn cursorline
 
 " 中文支持
 set fencs=utf-8,chinese,latin1 fenc=utf-8 enc=utf-8
@@ -158,7 +158,7 @@ let mapleader = ','
 map <C-M> :tabnew<CR>
 map <C-N> :tabnext<CR>
 map <C-P> :tabpre<CR>
-nnoremap <leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
+nnoremap <leader>e :tabedit <C-R>=expand('%:p:h') . '/'<CR>
 nnoremap <leader>, :tabnew <C-R>=expand('%:p:h') . '/'<CR>
 inoremap jj <Esc>
 
@@ -166,10 +166,14 @@ inoremap jj <Esc>
 nnoremap Y                     y$
 nnoremap #                     :let @/=printf('\<%s\>\C', expand('<cword>'))<CR>
 nnoremap @                     :execute "vimgrep /" . expand("<cword>") . "/ **/*.go"<CR>
-nnoremap <C-L>                 :bn<CR>
-nnoremap <C-H>                 :bp<CR>
-nnoremap <C-N>                 :cn<CR>
-nnoremap <C-P>                 :cp<CR>
+" nnoremap <C-L>                 :bn<CR>
+" nnoremap <C-H>                 :bp<CR>
+nnoremap <C-L>                 :tabnext<CR>
+nnoremap <C-H>                 :tabpre<CR>
+" nnoremap <C-N>                 :cn<CR>
+" nnoremap <C-P>                 :cp<CR>
+nnoremap <C-N>                 :bn<CR>
+nnoremap <C-P>                 :bp<CR>
 nnoremap <C-J>                 7<C-e>
 nnoremap <C-K>                 7<C-y>
 nnoremap <C-]>                 :Gtags<CR><CR>
