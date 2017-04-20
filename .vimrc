@@ -156,26 +156,24 @@ let mapleader = ','
 
 " tab
 map <C-M> :tabnew<CR>
-map <C-N> :tabnext<CR>
-map <C-P> :tabpre<CR>
-nnoremap <leader>e :tabedit <C-R>=expand('%:p:h') . '/'<CR>
+nnoremap <leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
 nnoremap <leader>, :tabnew <C-R>=expand('%:p:h') . '/'<CR>
 inoremap jj <Esc>
+
+"buffer
+nnorema  ff :ls<CR>
+nnoremap fb :b  
+nnoremap <C-L>                 :bn<CR>
+nnoremap <C-H>                 :bp<CR>
 
 " normal mode
 nnoremap Y                     y$
 nnoremap #                     :let @/=printf('\<%s\>\C', expand('<cword>'))<CR>
 nnoremap @                     :execute "vimgrep /" . expand("<cword>") . "/ **/*.go"<CR>
-" nnoremap <C-L>                 :bn<CR>
-" nnoremap <C-H>                 :bp<CR>
-nnoremap <C-L>                 :tabnext<CR>
-nnoremap <C-H>                 :tabpre<CR>
-" nnoremap <C-N>                 :cn<CR>
-" nnoremap <C-P>                 :cp<CR>
-nnoremap <C-N>                 :bn<CR>
-nnoremap <C-P>                 :bp<CR>
-nnoremap <C-J>                 7<C-e>
-nnoremap <C-K>                 7<C-y>
+nnoremap <C-N>                 :tabn<CR>
+nnoremap <C-P>                 :tabp<CR>
+nnoremap <C-J>                 15<C-e>
+nnoremap <C-K>                 15<C-y>
 nnoremap <C-]>                 :Gtags<CR><CR>
 nnoremap <C-T>                 :Gtags -r<CR><CR>
 nnoremap <C-F>                 :Gtags -gi<CR>
@@ -184,7 +182,7 @@ nnoremap <C-F>                 :Gtags -gi<CR>
 nnoremap <leader>c             :cclose<CR>
 nnoremap <leader>o             :copen<CR>
 nnoremap <leader>r             :!gtags<CR>
-nnoremap <leader>b             : %!xxd<CR>
+nnoremap <leader>b             :b 
 nnoremap <leader>bb            : %!xxd -r<CR>
 nnoremap <leader>y             : YRShow<CR>
 nnoremap <leader>h             <C-W>h
@@ -211,7 +209,7 @@ nnoremap <leader>u             :diffupdate<CR>
 nnoremap <silent> <leader>wm   :WMToggle<cr>
 
 " insert mode
-inoremap <leader>co            Yu Bo<yubo@yubo.org> <C-r>=strftime('%Y-%m-%d')<CR>
+inoremap <leader>co            Lai Wei<laiwei@open-falcon.org> <C-r>=strftime('%Y-%m-%d')<CR>
 inoremap <expr> <leader>fn     expand('%:p')
 inoremap <leader>dt            <C-r>=strftime('%Y-%m-%d')<CR>
 inoremap <leader>tm            <C-r>=strftime('%H:%M:%S')<CR>
@@ -301,6 +299,8 @@ let tlist_c_settings = 'c;f:My Functions'
 let Tlist_Process_File_Always = 1
 let Tlist_Use_Right_Window = 1
 let Tlist_Sort_Type = "order"
+nnoremap <leader>x :NERDTreeToggle<CR>
+inoremap <leader>x <Esc>:NERDTreeToggle<CR>
 
 
 " YCM{{{

@@ -76,6 +76,9 @@ add_path /opt/android/android-studio/bin
 add_path $HOME/bin
 add_path /usr/local/eclipse
 
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
 if [ "x"$TERM == "xxterm" ]; then
 	alias sshx='ssh -X'
 fi
@@ -83,3 +86,5 @@ fi
 if [ -f ~/.bash_local ]; then
 	. ~/.bash_local
 fi
+
+
