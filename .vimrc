@@ -162,7 +162,9 @@ inoremap jj <Esc>
 
 "buffer
 nnorema  ff :ls<CR>
-nnoremap fb :b  
+nnoremap fb :b
+nnoremap fd :bd<CR>
+nnoremap fo :w\|%bd\|e#\|bd#<CR>
 nnoremap <C-L>                 :bn<CR>
 nnoremap <C-H>                 :bp<CR>
 
